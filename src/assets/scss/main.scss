@@ -1,1 +1,3 @@
-@use './components/error';
+@use './shared/error';
+@use './shared/navbar';
+@use './components/todos';

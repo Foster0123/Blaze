@@ -1,0 +1,14 @@
+.update {
+    transition: text-shadow, 200ms ease-in;
+    &:hover {
+        transition: text-shadow, 200ms ease-in;
+        text-shadow: 0 0 10px #84cc16;
+    }
+}
+.delete {
+    transition: text-shadow, 200ms ease-out;
+    &:hover {
+        transition: text-shadow, 200ms ease-out;
+        text-shadow: 0 0 10px #b91c1c;
+    }
+}
