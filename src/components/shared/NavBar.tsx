@@ -3,9 +3,9 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 function NavbarModule(props: any) {
   return (
     <>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg" className='navbar'>
         <Container fluid>
-        <Navbar.Brand href="/">
+          <Navbar.Brand href="/">
             <img
               src={props.logoImage}
               width="30"
@@ -13,13 +13,12 @@ function NavbarModule(props: any) {
               className="d-inline-block align-top"
               alt="Blaze Logo"
             />
+            Blaze
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
               className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: '100px' }}
-              navbarScroll
             >
               <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#action2">Todos</Nav.Link>
@@ -29,13 +28,15 @@ function NavbarModule(props: any) {
             </Nav>
           </Navbar.Collapse>
         </Container>
-        <img
-              src={props.logoImage}
-              width="40"
-              height="40"
-              className="profile-image"
-              alt="Blaze Logo"
-            />
+        <div className='profile-container'>
+          <img
+            src={props.logoImage}
+            width="40"
+            height="40"
+            className="profile-image"
+            alt="Blaze Logo"
+          />
+        </div>
       </Navbar>
     </>
   );

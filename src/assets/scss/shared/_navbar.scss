@@ -5,11 +5,16 @@
         text-shadow: 0 0 10px black;
     }
 }
-.profile-image {
+.navbar {
+    color: white;
+    background-color: darkslategray;
+}
+.profile-container {
     position: absolute;
     right: 80px;
-    top: 8px;
-    border: 1px solid chocolate;
+    top: 7px;
+    border: 2px solid lime;
+    background-color: whitesmoke;
     border-radius: 50%;
     object-fit: cover;
 }
