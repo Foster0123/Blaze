@@ -1,3 +1,6 @@
+:root {
+    --navbar-hover-bg-color:rgba(0,0,0,0.7);
+}
 #theme-toggle {
     transition: text-shadow, 200ms ease-in-out;
     &:hover {
@@ -6,17 +9,65 @@
     }
 }
 .navbar {
+    padding: 10px 0;
+    font-family: 'Open Sans', cursive;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: darkslategray;
 }
-.profile-container {
+.navbar-header {
+    display: flex;
+    align-items: center;
+    .nav-title {
+        font-size: 1.5em;
+        font-weight: bolder;
+    }
+}
+.nav-link-container {
+    display: flex;
+    margin-right: 100px;
+    list-style-type: none;
+    align-items: center;
+    li a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        margin: 0 5px;
+        border-radius: 5px;
+        &:hover {
+            background-color: var(--navbar-hover-bg-color);
+        }
+    }
+}
+.nav-profile-container {
     position: absolute;
-    right: 80px;
+    right: 5px;
     top: 7px;
-    border: 2px solid lime;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    img {
+        width: 50px;
+        height: 50px;
+    }
+    li button {
+        background: none;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        &:hover {
+            background:var(--navbar-hover-bg-color);
+        }
+        i {
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 10px;
+        }
+    }
 }
 @media only screen and (max-width: 768px){
     #theme-toggle {
