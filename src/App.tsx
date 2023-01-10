@@ -14,12 +14,14 @@ import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Todo from "./components/Todo";
 
+import Logo from "./assets/img/blaze.png";
+
 import "./assets/scss/main.scss";
 
 function App() {
 	return (
 		<BrowserRouter>
-			<NavBar />
+			<NavBar logoImage = {Logo} />
 			<Routes>
 				<Route path="/" errorElement={<Error />} element={<HomePage />} />
 				<Route path="/todos" element={<Todo />} />
