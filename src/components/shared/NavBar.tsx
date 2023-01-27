@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button } from '@chakra-ui/react'
+import { Button, Stack } from '@chakra-ui/react'
 import ThemeSwitch from './ThemeSwitch';
 import { NavLink } from 'react-router-dom'
 import Logo from './../../assets/img/blaze.png'
@@ -12,7 +12,10 @@ const NavBar = () => {
                     <img src={Logo} alt="Blaze Logo" className="nav-logo" />
                     <h1 className="nav-title">Blaze</h1>
                 </NavLink>
-                <ThemeSwitch />
+                <Stack className='nav-theme-switch'>
+                    <ThemeSwitch name="theme-switch-1" id="theme-switch-1" />
+                </Stack>
+                
                 
             </section>
             <ul className="nav-link-container">
@@ -27,6 +30,10 @@ const NavBar = () => {
                 </li>
                 <li>
                     <NavLink to="/signup">Sign Up</NavLink>
+                </li>
+                <li className='theme-nav-item'>
+                    <span>Appearance: </span>
+                    <ThemeSwitch name="theme-switch-2" id="theme-switch-2" />
                 </li>
             </ul>
             <section className="nav-button-container">

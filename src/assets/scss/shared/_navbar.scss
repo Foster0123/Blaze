@@ -37,7 +37,6 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin-right: 10px;
         .nav-title {
             font-size: 2em;
             margin-bottom: 2px;
@@ -94,6 +93,17 @@
             }
         }
     }
+    .theme-nav-item {
+        width: 100%;
+        justify-content: space-around;
+        background-color: teal;
+        padding: 10px 0;
+        display: none!important;
+        border-radius: 5px;
+        span {
+            font-weight: bold;
+        }
+    }
 }
 
 .nav-button-container {
@@ -132,7 +142,9 @@
         ;
         grid-template-columns: auto;
     }
-
+    .navbar-header .nav-theme-switch {
+        display: none;
+    }
     .nav-link-container {
         margin-top: 5px !important;
         flex-direction: column;
@@ -140,6 +152,9 @@
 
         li {
             width: inherit;
+        }
+        .theme-nav-item {
+            display: flex!important;
         }
     }
 }
