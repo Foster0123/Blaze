@@ -1,28 +1,50 @@
-
-function NavbarModule(props: any) {
-	return (
-		<>
-			<nav className="navbar">
-				<div className="navbar-header">
-					<img src={props.logoImage} width="50" height="50" alt="Blaze Logo" />
-					<header className="nav-title">Blaze</header>
-				</div>
-				<div>
-					<ul className="nav-link-container">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Todos</a></li>
-						<li><a href="#">Sign In</a></li>
-						<li><a href="#">Sign Up</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
-					<ul className="nav-profile-container">
-						<li><img src={props.logoImage} alt="Profile Picture" /></li>
-						<li><button><i className="fa-solid fa-bars"></i></button></li>
-					</ul>
-				</div>
-			</nav>
-		</>
-	);
+import * as React from 'react'
+import { Button } from '@chakra-ui/react'
+import ThemeSwitch from './ThemeSwitch';
+import { NavLink } from 'react-router-dom'
+import Logo from './../../assets/img/blaze.png'
+import ProfilePicture from './../../assets/img/user.png'
+const NavBar = () => {
+    return (
+        <nav className="navbar">
+            <section className="navbar-header">
+                <NavLink to="/" className="home-link">
+                    <img src={Logo} alt="Blaze Logo" className="nav-logo" />
+                    <h1 className="nav-title">Blaze</h1>
+                </NavLink>
+                <ThemeSwitch />
+                
+            </section>
+            <ul className="nav-link-container">
+                <li>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/todos">Todos</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/signin">Sign In</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/signup">Sign Up</NavLink>
+                </li>
+            </ul>
+            <section className="nav-button-container">
+                <Button
+                    colorScheme="none"
+                    className="chakra-btn nav-profile-btn"
+                >
+                    <img
+                        className="profile-image"
+                        src={ProfilePicture}
+                        alt="Profile Picture Placeholder"
+                    />
+                </Button>
+                <Button colorScheme="teal" className="chakra-btn nav-menu-btn">
+                    <i className="fa-solid fa-xmark"></i>
+                </Button>
+            </section>
+        </nav>
+    )
 }
-
-export default NavbarModule;
+export default NavBar

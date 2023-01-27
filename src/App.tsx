@@ -8,20 +8,16 @@ from "react-router-dom";
 
 import Error from "./components/shared/404";
 import NavBar from "./components/shared/NavBar";
-import HomePage from "./components/HomePage";
+import HomePage from "./components/Home";
 import Account from "./components/Account";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Todo from "./components/Todo";
 
-import Logo from "./assets/img/blaze.png";
-
-import "./assets/scss/main.scss";
-
 function App() {
 	return (
 		<BrowserRouter>
-			<NavBar logoImage = {Logo} />
+			<NavBar />
 			<Routes>
 				<Route path="/" errorElement={<Error />} element={<HomePage />} />
 				<Route path="/todos" element={<Todo />} />

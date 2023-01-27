@@ -1,78 +1,145 @@
 :root {
-    --navbar-hover-bg-color:rgba(0,0,0,0.7);
+    --navbar-hover-bg-color: rgba(0, 0, 0, 0.7);
+    --nav-menu-button-padding: 5px;
+    --navbar-bg-color:darkslategray;
 }
+
 #theme-toggle {
     transition: text-shadow, 200ms ease-in-out;
+
     &:hover {
         transition: text-shadow, 200ms ease-in-out;
         text-shadow: 0 0 10px black;
     }
 }
+
 .navbar {
-    padding: 10px 0;
+    padding: 10px 10px;
     font-family: 'Open Sans', cursive;
     color: white;
-    display: flex;
+    display: grid;
+    align-self: center;
+    grid-template-areas: "navbar_header navbar_link navbar_button";
+    grid-template-columns: 180px 1fr 100px;
     align-items: center;
     justify-content: space-between;
-    background-color: darkslategray;
+    background-color: var(--navbar-bg-color);
 }
+
 .navbar-header {
-    display: flex;
+    grid-area: navbar_header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: center;
     align-items: center;
-    .nav-title {
-        font-size: 1.5em;
-        font-weight: bolder;
+    .home-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 10px;
+        .nav-title {
+            font-size: 2em;
+            margin-bottom: 2px;
+            font-weight: bolder;
+        }
+        .nav-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+    .nav-theme-switch {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1px;
+        margin-left: 5px;
     }
 }
+
 .nav-link-container {
+    grid-area: navbar_link;
     display: flex;
     margin-right: 100px;
     list-style-type: none;
-    align-items: center;
-    li a {
-        color: white;
-        padding: 10px;
-        text-decoration: none;
-        margin: 0 5px;
-        border-radius: 5px;
-        &:hover {
-            background-color: var(--navbar-hover-bg-color);
-        }
-    }
-}
-.nav-profile-container {
-    position: absolute;
-    right: 5px;
-    top: 7px;
-    display: flex;
-    align-items: center;
+    text-align: center;
     justify-content: center;
-    list-style-type: none;
-    img {
-        width: 50px;
-        height: 50px;
-    }
-    li button {
-        background: none;
-        outline: none;
-        border: none;
-        border-radius: 10px;
-        &:hover {
-            background:var(--navbar-hover-bg-color);
-        }
-        i {
+    width: 100%;
+
+    li {
+        padding: 2px 0;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        a {
+            width: inherit;
+            display: inline-block;
             color: white;
-            font-size: 2rem;
-            cursor: pointer;
             padding: 10px;
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 1.2em;
+            font-weight: 500;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: var(--navbar-hover-bg-color);
+            }
+
+            &:focus {
+                font-weight: bolder;
+            }
         }
     }
 }
-@media only screen and (max-width: 768px){
-    #theme-toggle {
-        position: absolute;
-        top: 12.5px;
-        right: 50px;
+
+.nav-button-container {
+    grid-area: navbar_button;
+    margin-right: 5px;
+
+    .nav-menu-btn {
+        margin: 0;
+        padding: var(--nav-menu-button-padding);
+    }
+
+    .nav-profile-btn {
+        padding: 0 5px;
+    }
+
+    .profile-image {
+        background-color: white;
+        box-shadow: 0 0 5px white;
+        width: 45px;
+        height: 45px;
+        padding: 1px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    i {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        grid-template-areas:
+            "navbar_header navbar_button"
+            "navbar_link navbar_link"
+        ;
+        grid-template-columns: auto;
+    }
+
+    .nav-link-container {
+        margin-top: 5px !important;
+        flex-direction: column;
+        margin: 0;
+
+        li {
+            width: inherit;
+        }
     }
 }
