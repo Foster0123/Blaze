@@ -6,13 +6,13 @@ import Logo from './../../assets/img/blaze.png'
 import ProfilePicture from './../../assets/img/user.png'
 const NavBar = () => {
     const Navbar: any = useRef(null);
-    const styles = {
-        height: "200px"
-    }
-    const toggleNavbar = () => {
-        if(window.innerWidth < 768){
-            Navbar.current.classList.toggle("transit-navbar-height")
-        }
+    const navMenuIcon: any = useRef(null)
+
+    const toggleNavbar = (e: any) => {
+        navMenuIcon.current.classList.contains("fa-bars") ? 
+        navMenuIcon.current.className = "fa-solid fa-xmark":
+        navMenuIcon.current.className = "fa-solid fa-bars"
+        Navbar.current.classList.toggle("transit-navbar-height")
     }
     return (
         <nav className="navbar" ref={Navbar}>
@@ -24,8 +24,8 @@ const NavBar = () => {
                 <Stack className='nav-theme-switch'>
                     <ThemeSwitch name="theme-switch-1" id="theme-switch-1" />
                 </Stack>
-                
-                
+
+
             </section>
             <ul className="nav-link-container">
                 <li>
@@ -47,18 +47,20 @@ const NavBar = () => {
             </ul>
             <section className="nav-button-container">
                 <Button
-                    onClick={toggleNavbar}
                     colorScheme="none"
                     className="chakra-btn nav-profile-btn"
                 >
-                    <img
-                        className="profile-image"
-                        src={ProfilePicture}
-                        alt="Profile Picture Placeholder"
-                    />
+                    <NavLink to="/account">
+                        <img
+                            className="profile-image"
+                            src={ProfilePicture}
+                            alt="Profile Picture Placeholder"
+                        />
+                    </NavLink>
+
                 </Button>
                 <Button onClick={toggleNavbar} colorScheme="teal" className="chakra-btn nav-menu-btn">
-                    <i className="fa-solid fa-xmark"></i>
+                    <i className="fa-solid fa-bars" ref={navMenuIcon}></i>
                 </Button>
             </section>
         </nav>
