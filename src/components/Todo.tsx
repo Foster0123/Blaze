@@ -1,4 +1,3 @@
-import MyModal from "./shared/Modal";
 const Todo = () => {
   let todos = [
     {
@@ -13,7 +12,6 @@ const Todo = () => {
   ];
   return (
     <div className="px-2">
-      <MyModal />
     </div>
   );
 };

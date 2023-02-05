@@ -18,11 +18,14 @@
     font-family: 'Open Sans', cursive;
     color: white;
     display: grid;
+    height: 70px;
     align-self: center;
     grid-template-areas: "navbar_header navbar_link navbar_button";
     grid-template-columns: 180px 1fr 100px;
     align-items: center;
     justify-content: space-between;
+    transition: height, 200ms ease;
+    overflow: hidden;
     background-color: var(--navbar-bg-color);
 }
 
@@ -66,7 +69,9 @@
     text-align: center;
     justify-content: center;
     width: 100%;
-
+    transform: scale(1);
+    transform-origin: top;
+    transition: transform, 200ms ease-in-out;
     li {
         padding: 2px 0;
         display: flex;
@@ -95,6 +100,7 @@
     }
     .theme-nav-item {
         width: 100%;
+        margin-top: 10px;
         justify-content: space-around;
         background-color: teal;
         padding: 10px 0;
@@ -133,8 +139,17 @@
         font-size: 2em;
     }
 }
+.hide-navbar {
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform, 200ms ease-in-out;
+}
 
 @media only screen and (max-width: 768px) {
+    .transit-navbar-height {
+        height:330px;
+        transition: height, 200ms ease-in-out;
+    }
     .navbar {
         grid-template-areas:
             "navbar_header navbar_button"
@@ -146,7 +161,7 @@
         display: none;
     }
     .nav-link-container {
-        margin-top: 5px !important;
+        margin-top: 10px !important;
         flex-direction: column;
         margin: 0;
 

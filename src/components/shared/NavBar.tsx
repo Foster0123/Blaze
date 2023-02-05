@@ -1,12 +1,21 @@
-import * as React from 'react'
+import React, { useRef } from 'react'
 import { Button, Stack } from '@chakra-ui/react'
-import ThemeSwitch from './ThemeSwitch';
+import ThemeSwitch from '../modules/ThemeSwitch';
 import { NavLink } from 'react-router-dom'
 import Logo from './../../assets/img/blaze.png'
 import ProfilePicture from './../../assets/img/user.png'
 const NavBar = () => {
+    const Navbar: any = useRef(null);
+    const styles = {
+        height: "200px"
+    }
+    const toggleNavbar = () => {
+        if(window.innerWidth < 768){
+            Navbar.current.classList.toggle("transit-navbar-height")
+        }
+    }
     return (
-        <nav className="navbar">
+        <nav className="navbar" ref={Navbar}>
             <section className="navbar-header">
                 <NavLink to="/" className="home-link">
                     <img src={Logo} alt="Blaze Logo" className="nav-logo" />
@@ -38,6 +47,7 @@ const NavBar = () => {
             </ul>
             <section className="nav-button-container">
                 <Button
+                    onClick={toggleNavbar}
                     colorScheme="none"
                     className="chakra-btn nav-profile-btn"
                 >
@@ -47,7 +57,7 @@ const NavBar = () => {
                         alt="Profile Picture Placeholder"
                     />
                 </Button>
-                <Button colorScheme="teal" className="chakra-btn nav-menu-btn">
+                <Button onClick={toggleNavbar} colorScheme="teal" className="chakra-btn nav-menu-btn">
                     <i className="fa-solid fa-xmark"></i>
                 </Button>
             </section>
