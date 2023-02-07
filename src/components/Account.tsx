@@ -12,7 +12,7 @@ import {
 import ProfilePicture from './../assets/img/user.png'
 import Hr from './shared/Hr';
 const Account = () => {
-
+    let addonWidth = "auto";
     return (
         <div>
             <div className="account-page">
@@ -41,6 +41,10 @@ const Account = () => {
                                 <Text fontSize="md" fontWeight="bold">Email</Text>
                                 <Text>somethingspecial6834@gmail.com</Text>
                             </StackItem>
+                            <StackItem>
+                                <Text fontSize="md" fontWeight="bold">Bio</Text>
+                                <Text>Some Bio Here</Text>
+                            </StackItem>
                         </Stack>
                     </section>
                 </section>
@@ -49,49 +53,54 @@ const Account = () => {
                     <div>
                         <Stack className='input-section'>
                             <InputGroup>
-                                <InputLeftAddon>
+                                <InputLeftAddon width={addonWidth}>
                                     <i style={{ marginLeft: "2px" }} className="fa-solid fa-user-secret"></i>
                                 </InputLeftAddon>
                                 <Input type='text' name='username' placeholder='Full Name' />
                             </InputGroup>
                             <InputGroup>
-                                <InputLeftAddon>
+                                <InputLeftAddon width={addonWidth}>
                                     <i className="fa-solid fa-user-circle"></i>
                                 </InputLeftAddon>
                                 <Input type='text' name='username' placeholder='Username' />
                             </InputGroup>
                             <InputGroup>
-                                <InputLeftAddon>
+                                <InputLeftAddon width={addonWidth}>
                                     <i className='fa-solid fa-envelope'></i>
                                 </InputLeftAddon>
                                 <Input type='text' name='username' placeholder='Email' />
                             </InputGroup>
+                            <InputGroup>
+                                <InputLeftAddon width={addonWidth}>
+                                    <i className="bi bi-journal-richtext"></i>
+                                </InputLeftAddon>
+                                <Textarea borderRadius="0 7px 7px 0" rows={1} name='bio' placeholder='Bio'></Textarea>
+                            </InputGroup>
                             <Hr color="teal" width="100%" height="1px" />
                             <InputGroup>
-                                <InputLeftAddon>
-
-                                    <i className="fa-solid fa-lock-open"></i>
+                                <InputLeftAddon width={addonWidth}>
+                                    <i className="bi bi-unlock-fill"></i>
                                 </InputLeftAddon>
                                 <Input type='text' name='username' placeholder='Current Password' />
-                                <InputRightAddon>
+                                <InputRightAddon width={addonWidth}>
                                     <i className="fa-solid fa-eye-slash"></i>
                                 </InputRightAddon>
                             </InputGroup>
                             <InputGroup>
-                                <InputLeftAddon>
-                                    <i className="fa-solid fa-key"></i>
+                                <InputLeftAddon width={addonWidth}>
+                                    <i className="bi bi-key"></i>
                                 </InputLeftAddon>
                                 <Input type='text' name='username' placeholder='New Password' />
-                                <InputRightAddon>
+                                <InputRightAddon width={addonWidth}>
                                     <i className="fa-solid fa-eye-slash"></i>
                                 </InputRightAddon>
                             </InputGroup>
                             <InputGroup>
-                                <InputLeftAddon>
-                                    <i className="fa-solid fa-lock"></i>
+                                <InputLeftAddon width={addonWidth}>
+                                    <i className="bi bi-lock-fill"></i>
                                 </InputLeftAddon>
                                 <Input type='text' name='username' placeholder='Confirm Password' />
-                                <InputRightAddon>
+                                <InputRightAddon width={addonWidth}>
                                     <i className="fa-solid fa-eye-slash"></i>
                                 </InputRightAddon>
                             </InputGroup>
@@ -103,31 +112,31 @@ const Account = () => {
                     <h2 className='account-window-headers'>Additionals</h2>
                     <Stack className='input-section'>
                         <InputGroup>
-                            <InputLeftAddon>
+                            <InputLeftAddon width={addonWidth}>
                                 <i className="fa-solid fa-globe"></i>
                             </InputLeftAddon>
                             <Input type='text' name='website' placeholder='Website' />
                         </InputGroup>
                         <InputGroup>
-                            <InputLeftAddon>
+                            <InputLeftAddon width={addonWidth}>
                                 <i className='fa-solid fa-phone'></i>
                             </InputLeftAddon>
                             <Input type='text' name='phone' placeholder='Phone Number' />
                         </InputGroup>
                         <InputGroup>
-                            <InputLeftAddon>
+                            <InputLeftAddon width={addonWidth}>
                                 <i className='fa-solid fa-location'></i>
                             </InputLeftAddon>
                             <Input type='text' name='location' placeholder='Location' />
                         </InputGroup>
                         <InputGroup>
-                            <InputLeftAddon>
+                            <InputLeftAddon width={addonWidth}>
                                 <i className="fa-solid fa-briefcase"></i>
                             </InputLeftAddon>
                             <Input type='text' name='profession' placeholder='Profession' />
                         </InputGroup>
                         <InputGroup>
-                            <InputLeftAddon>
+                            <InputLeftAddon width={addonWidth}>
                                 <i className="bi bi-buildings-fill"></i>
                             </InputLeftAddon>
                             <Input type='text' name='company' placeholder='Company Name' />
