@@ -9,7 +9,12 @@
 .account-intro-profile-section {
     width: 100%;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 170px 1fr;
+    align-items: center;
+    justify-content: center;
+}
+.account-intro-profile-image-section {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -17,7 +22,6 @@
     width: 150px;
     height: 150px;
     position: relative;
-    border: 1px solid cyan;
     img {
         width: 150px;
         height: 150px;
@@ -45,5 +49,13 @@
             color: white;
             font-size: 20px;
         }
+    }
+}
+
+@media (max-width: 400px){
+    .account-intro-profile-section {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
     }
 }
