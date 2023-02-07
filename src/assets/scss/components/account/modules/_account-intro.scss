@@ -1,19 +1,49 @@
+
 .account-intro {
-    background-color: cornflowerblue;
-    padding: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 1fr;
 }
-.account-intro-header {
-    font-size: 30px;
-    font-weight: bolder;
-    text-align: center;
-    font-family: "Nunito", sans-serif;
+.account-intro-profile-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    justify-content: center;
 }
 .account-intro-profile-image {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border: 1px solid cyan;
     img {
         width: 150px;
         height: 150px;
         object-fit: cover;
         border-radius: 50%;
         box-shadow: 0 0 10px yellowgreen;
+    }
+    .account-image-input-label {
+        position: absolute;
+        right: 20px;
+        bottom: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        padding: 10px;
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        input {
+            display: none;
+        }
+        i {
+            color: white;
+            font-size: 20px;
+        }
     }
 }
