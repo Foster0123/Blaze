@@ -1,3 +1,5 @@
+import NavBar from "./shared/NavBar";
+
 const Todo = () => {
   let todos = [
     {
@@ -12,6 +14,7 @@ const Todo = () => {
   ];
   return (
     <div className="px-2">
+      <NavBar />
     </div>
   );
 };

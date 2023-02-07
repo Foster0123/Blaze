@@ -1,6 +1,15 @@
 @use './shared/global';
 @use './shared/error';
 @use './shared/navbar';
+@use './shared/footer';
 @use './components/signin/signin.index';
 @use './components/todo/todo.index';
 @use './components/account/account.index';
+
+// html, body {
+//     height: 100%;
+//     min-height: 100%;
+// }
+// #root {
+//     height: 100%;
+// }

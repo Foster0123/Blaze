@@ -1,3 +1,4 @@
+import { Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Error = () => {
@@ -8,9 +9,9 @@ const Error = () => {
 				<h1>404 Not Found</h1>
 			</div>
 			<div className="back-to-home-from-error">
-				<button>
+				<Button colorScheme="teal">
 					<Link className="text-2xl text-white bg-zinc-900 p-3 rounded-full" to="/">Back To Home</Link>
-				</button>
+				</Button>
 			</div>
 		</div>
 	);
