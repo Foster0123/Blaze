@@ -13,6 +13,7 @@ import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Todo from "./components/Todo";
 import ForgotPassword from "./components/helpers/ForgotPassword";
+import CheckEmail from "./components/helpers/CheckEmail";
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 				<Route path="/signup" element={<Signup />} />
 				<Route path="*" element={<Error />} />
 				<Route path="/forgot-password" element={<ForgotPassword />} />
+				<Route path="/forgot-password/check-email" element={<CheckEmail />} />
 			</Routes>
 		</BrowserRouter>
 	);

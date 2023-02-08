@@ -2,6 +2,8 @@
 @use './shared/error';
 @use './shared/navbar';
 @use './shared/footer';
+@use './components/forgot-password/forgot-password.index';
+@use './components/forgot-password/check-email.index';
 @use './components/signin/signin.index';
 @use './components/todo/todo.index';
 @use './components/account/account.index';
