@@ -1,19 +1,21 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { Button, Stack } from '@chakra-ui/react'
-import ThemeSwitch from '../modules/ThemeSwitch';
+import ThemeSwitch from '../modules/ThemeSwitch'
 import { NavLink } from 'react-router-dom'
+import { useColorMode } from '@chakra-ui/react'
 import Logo from './../../assets/img/blaze.png'
 import ProfilePicture from './../../assets/img/user.png'
 const NavBar = () => {
     const Navbar: any = useRef(null);
     const navMenuIcon: any = useRef(null)
-
+    const { colorMode, toggleColorMode } = useColorMode()
     const toggleNavbar = (e: any) => {
         navMenuIcon.current.classList.contains("fa-bars") ? 
         navMenuIcon.current.className = "fa-solid fa-xmark":
         navMenuIcon.current.className = "fa-solid fa-bars"
         Navbar.current.classList.toggle("transit-navbar-height")
     }
+    console.log(colorMode)
     return (
         <nav className="navbar" ref={Navbar}>
             <section className="navbar-header">
@@ -21,7 +23,7 @@ const NavBar = () => {
                     <img src={Logo} alt="Blaze Logo" className="nav-logo" />
                     <h1 className="nav-title">Blaze</h1>
                 </NavLink>
-                <Stack className='nav-theme-switch'>
+                <Stack className='nav-theme-switch' onClick={toggleColorMode}>
                     <ThemeSwitch name="theme-switch-1" id="theme-switch-1" />
                 </Stack>
 
