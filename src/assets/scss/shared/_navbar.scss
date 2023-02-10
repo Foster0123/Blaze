@@ -1,7 +1,7 @@
 :root {
     --navbar-hover-bg-color: rgba(0, 0, 0, 0.7);
     --nav-menu-button-padding: 5px;
-    --navbar-bg-color:darkslategray;
+    --navbar-bg-color: linear-gradient(45deg, gold, orangered);
 }
 
 #theme-toggle {
@@ -26,7 +26,7 @@
     justify-content: space-between;
     transition: height, 200ms ease;
     overflow: hidden;
-    background-color: var(--navbar-bg-color);
+    background: var(--navbar-bg-color);
 }
 
 .navbar-header {

@@ -64,7 +64,7 @@ const Signup = () => {
 
                         <InputGroup>
                             <InputLeftAddon style={{ paddingLeft: "5px", paddingRight: "5px" }}>
-                                <i style={{ fontSize: "24px" }} className="fa-solid fa-key"></i>
+                                <i style={{ fontSize: "24px" }} className="bi bi-lock"></i>
                             </InputLeftAddon>
                             <Input name="signup_retype_password" type={showRetypePassword ? 'text' : 'password'} placeholder="Retype Password" />
                             <InputRightAddon style={{ paddingLeft: "5px", paddingRight: "5px" }} onClick={toggleVisibility2}>

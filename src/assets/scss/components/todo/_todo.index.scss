@@ -1,14 +1,28 @@
-.update {
-    transition: text-shadow, 200ms ease-in;
-    &:hover {
-        transition: text-shadow, 200ms ease-in;
-        text-shadow: 0 0 10px #84cc16;
-    }
+@use './modules/todobar';
+@use './modules/sidebar-todo';
+@use './modules/todo-preview';
+
+.todo-container {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.delete {
-    transition: text-shadow, 200ms ease-out;
-    &:hover {
-        transition: text-shadow, 200ms ease-out;
-        text-shadow: 0 0 10px #b91c1c;
-    }
+.todo {
+    width: 1000px;
+    display:grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "todo-bar todo-bar todo-bar"
+    "todo-sidebar todo-preview todo-preview"
+    "todo-sidebar todo-preview todo-preview"
+    ;
+    font-size:16px;
+}
+.todobar-task-name {
+    text-align: center;
 }

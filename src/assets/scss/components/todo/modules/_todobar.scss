@@ -1,0 +1,20 @@
+:root {
+    --todobar-bg-color:rgba(0,0,0,0.85);
+}
+.todobar-container {
+    grid-area: todo-bar;
+}
+.todobar {
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 60px 1fr 120px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--todobar-bg-color);
+}
+.todobar-buttons {
+    width: 100%;
+}

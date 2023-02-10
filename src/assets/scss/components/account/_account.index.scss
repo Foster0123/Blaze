@@ -37,6 +37,9 @@
     width: 100%;
     justify-content: center;
 }
+.icon {
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .account-page {
         grid-template-columns: 1fr;

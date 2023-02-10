@@ -23,10 +23,10 @@ const AccountDelete = () => {
                     <PopoverHeader color="crimson" fontWeight='semibold' textAlign="center">Delete Account ? No Going Back!</PopoverHeader>
                     <PopoverArrow />
                     <PopoverCloseButton />
-                    <PopoverBody maxW={{ base: "100%", lg: "max-content" }}>
-                        <Stack direction="row" style={{ display: "flex", justifyContent: "center" }}>
-                            <Button colorScheme="red">Yes</Button>
-                            <Button colorScheme="blue">Cancel</Button>
+                    <PopoverBody>
+                        <Stack width="100%" direction="row" style={{ display: "flex", justifyContent: "center" }}>
+                            <Button width="50%" colorScheme="red">Yes</Button>
+                            <Button width="50%" colorScheme="blue">Cancel</Button>
                         </Stack>
                     </PopoverBody>
                 </PopoverContent>
