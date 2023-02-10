@@ -1,6 +1,9 @@
+:root {
+    --todo-sidebar-bg-color:gold;
+}
 .todo-sidebar-container {
     grid-area: todo-sidebar;
-    background-color: orangered;
+    background-color: var(--todo-sidebar-bg-color);
     padding: 10px;
     border-radius: 10px;
 }

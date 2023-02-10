@@ -10,10 +10,13 @@
     width: 100%;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 60px 1fr 120px;
+    grid-template-columns: 80px 1fr 120px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--todobar-bg-color);
+}
+.todobar-header {
+    text-align: center;
 }
 .todobar-buttons {
     width: 100%;

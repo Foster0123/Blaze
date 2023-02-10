@@ -7,6 +7,7 @@
 @use './components/signin/signin.index';
 @use './components/todo/todo.index';
 @use './components/account/account.index';
+@use './components/index/home.index.scss';
 
 html, body {
     height: 100%;

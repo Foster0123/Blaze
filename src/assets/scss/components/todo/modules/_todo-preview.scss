@@ -1,6 +1,9 @@
+:root {
+    --todo-preview-bg-color:rgba(37, 37, 37, 0.911);
+}
 .todo-preview-container {
     grid-area: todo-preview;
-    background-color: greenyellow;
+    background-color: var(--todo-preview-bg-color);
     padding: 10px;
     border-radius: 10px;
 }

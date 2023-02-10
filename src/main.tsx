@@ -6,7 +6,7 @@ import "./assets/scss/main.scss";
 import theme from './components/theme/theme';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <ChakraProvider theme={theme}>
+  <ChakraProvider>
     <React.StrictMode>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <App />
