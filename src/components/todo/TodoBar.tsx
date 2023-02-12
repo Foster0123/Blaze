@@ -4,7 +4,10 @@ const TodoBar = () => {
     return (
         <div className="todobar-container">
             <div className="todobar">
-                <Stack padding={0}>
+                <Stack direction="row" padding={0}>
+                    <IconButton  aria-label="" size="sm" colorScheme="white" variant="outline">
+                        <i className="bi bi-layout-sidebar"></i>
+                    </IconButton>
                     <Text fontSize="xl">Header</Text>
                 </Stack>
                 <Stack className="todobar-task-name">

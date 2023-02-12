@@ -72,12 +72,7 @@ const Signup = () => {
                             </InputRightAddon>
                         </InputGroup>
                         <Text textAlign="right" fontSize="md" color="red">Password Doesnt Match</Text>
-
                         <Checkbox name="signup_remember">Remember Me</Checkbox>
-                        <Text fontSize="md">
-                            Forgot Password?
-                            <Link style={{ color: "teal", fontWeight: "bold" }} to="/forgot-password">Reset</Link>
-                        </Text>
                         <Button>Register</Button>
                     </Stack>
                 </form>

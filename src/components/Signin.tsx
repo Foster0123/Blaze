@@ -31,9 +31,9 @@ const Signin = () => {
                         </InputGroup>
                         <Text textAlign="right" fontSize="md" color="red">Password Invalid</Text>
                         <Checkbox name="remember">Remember Me</Checkbox>
-                        <Text fontSize="md">
+                        <Text fontSize="md" textAlign="center">
                             Forgot Password?
-                            <Link style={{ color: "teal", fontWeight: "bold" }} to="/forgot-password">Reset</Link>
+                            <Link style={{ color: "yellowgreen", fontWeight: "bold", fontSize:"18px", marginLeft: "10px" }} to="/forgot-password">Reset</Link>
                         </Text>
                         <Button>Sign In</Button>
                     </Stack>

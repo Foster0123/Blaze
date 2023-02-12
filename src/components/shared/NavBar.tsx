@@ -61,7 +61,7 @@ const NavBar = () => {
                     </NavLink>
 
                 </Button>
-                <Button onClick={toggleNavbar} colorScheme="teal" className="chakra-btn nav-menu-btn">
+                <Button onClick={toggleNavbar} colorScheme="white" variant="outline" className="chakra-btn nav-menu-btn">
                     <i className="fa-solid fa-bars" ref={navMenuIcon}></i>
                 </Button>
             </section>
