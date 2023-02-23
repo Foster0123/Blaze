@@ -1,0 +1,66 @@
+:root {
+    --todo-preview-bg-color:rgba(37, 37, 37, 0.911);
+}
+.todo-preview-container {
+    grid-area: todo-preview;
+    background-color: var(--todo-preview-bg-color)!important;
+    padding: 10px;
+    border-radius: 10px;
+    header {
+        text-align: center;
+        font-weight: bolder;
+    }
+}
+.todo-list {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: 1fr;
+}
+.todo-tasks {
+    background-color: gray;
+    border-radius: 10px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 25px 40px 1fr 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-tasks .todo-task-index {
+    display: inline-block;
+    width: 24px;
+    margin-left: 5px;
+    height: 24px;
+    border-radius: 50%;
+    position: relative;
+    padding: 2.5px;
+    background-color: orange;
+    .todo-index {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+.todo-tasks .todo-task-info {
+    h4 {
+        font-weight: bold;
+    }
+}
+.todo-tasks .todo-task-buttons {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    button {
+        display: inline-block;
+        padding:2px 6px;
+        margin-right: 5px;
+        border-radius: 50%;
+        position: relative;
+    }
+    .edit-button {
+        background-color: gold;
+    }
+    .delete-button {
+        background-color: red;
+    }
+}

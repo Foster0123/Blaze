@@ -1,0 +1,12 @@
+:root {
+    // --index-page-bg-color: rgba(0,0,0,0.9);
+    --index-page-bg-color: rgba(255, 255,255,0.9);
+}
+.index-page {
+    height: 100%;
+    background-color:var(--index-page-bg-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}

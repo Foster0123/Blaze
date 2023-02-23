@@ -1,0 +1,17 @@
+.check-email {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.check-email-box {
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 10px;
+    padding: 30px 15px;
+    font-family: "Open Sans", sans-serif;
+    box-shadow: 0 0 10px black;
+}
