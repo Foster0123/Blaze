@@ -12,10 +12,8 @@
 .todo {
     color: white;
     width: 1200px;
-    min-height: 600px;
     display:grid;
     grid-gap: 5px;
-    padding: 5px;
     position: relative;
     grid-template-rows: 50px auto;
     grid-template-columns: 1fr 3fr;

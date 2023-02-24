@@ -5,6 +5,9 @@
     grid-area: todo-preview;
     background-color: var(--todo-preview-bg-color)!important;
     padding: 10px;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 20px 1fr;
     border-radius: 10px;
     header {
         text-align: center;
@@ -14,7 +17,18 @@
 .todo-list {
     display: grid;
     grid-gap: 5px;
+    overflow-y: scroll;
+    height: 100%;
+    padding: 5px;
     grid-template-rows: 1fr;
+    &::-webkit-scrollbar {
+        width: 5px;
+        border-radius: 10px;
+        background-color: silver;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: gold;
+    }
 }
 .todo-tasks {
     background-color: gray;
@@ -27,18 +41,15 @@
 }
 .todo-tasks .todo-task-index {
     display: inline-block;
-    width: 24px;
-    margin-left: 5px;
-    height: 24px;
+    margin-right: 5px;
     border-radius: 50%;
     position: relative;
-    padding: 2.5px;
-    background-color: orange;
+    padding: .5px;
+    border-right: 2px solid gold;
     .todo-index {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 .todo-tasks .todo-task-info {
