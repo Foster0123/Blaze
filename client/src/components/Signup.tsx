@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Stack, InputGroup, InputLeftAddon, InputRightAddon, Input, Checkbox, Button, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import NavBar from "./shared/NavBar";
+import Hr from "./modules/Hr";
+import GoogleIcon from './../assets/img/google.png'
 
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -74,6 +76,8 @@ const Signup = () => {
                         <Text textAlign="right" fontSize="md" color="red">Password Doesnt Match</Text>
                         <Checkbox name="signup_remember">Remember Me</Checkbox>
                         <Button>Register</Button>
+                        <Hr color="orange" height={2.5}/>
+                        <Button colorScheme="orange" type="submit" leftIcon={<img src={GoogleIcon} width="25" height="25" alt="google icon" />}>Signup With Google</Button>
                     </Stack>
                 </form>
             </div>

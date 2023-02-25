@@ -5,13 +5,15 @@
     grid-area: todo-preview;
     background-color: var(--todo-preview-bg-color)!important;
     padding: 10px;
-    height: 80vh;
+    height: var(--todo-section-height);
     display: grid;
-    grid-template-rows: 20px 1fr;
+    grid-template-rows: 30px 1fr;
     border-radius: 10px;
     header {
         text-align: center;
+        font-family: "Open Sans", sans-serif;
         font-weight: bolder;
+        letter-spacing: 1px;
     }
 }
 .todo-list {
@@ -31,7 +33,7 @@
     }
 }
 .todo-tasks {
-    background-color: gray;
+    background-color: rgba(0,0,0,0.85);
     border-radius: 10px;
     padding: 5px;
     display: grid;

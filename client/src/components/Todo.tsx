@@ -6,7 +6,6 @@ import TodoBar from "./todo/TodoBar";
 
 const Todo = () => {
     const val = useSelector((state: any) => state.uiSlice.value)
-    console.log(val)
     return (
         <div>
             <NavBar />

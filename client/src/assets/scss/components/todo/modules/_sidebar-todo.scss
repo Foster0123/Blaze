@@ -4,7 +4,7 @@
 }
 .todo-sidebar-container {
     grid-area: todo-sidebar;
-    height: 80vh;
+    height: var(--todo-section-height);
     background-color: var(--todo-sidebar-bg-color);
     padding: 10px;
     border-radius: 10px;
@@ -30,8 +30,8 @@
 @media (max-width: 768px){
     .todo-sidebar-container {
         position: absolute;
-        left: 0px;
+        left: 5px;
         width: 250px;
-        top: 55px;
+        top: 60px;
     }
 }

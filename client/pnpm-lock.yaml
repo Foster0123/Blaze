@@ -13,6 +13,7 @@ specifiers:
   axios: ^1.3.3
   cssnano: ^5.1.15
   cssnano-preset-default: ^5.2.14
+  dotenv: ^16.0.3
   framer-motion: ^9.0.4
   postcss: ^8.4.21
   react: ^18.2.0
@@ -29,6 +30,7 @@ dependencies:
   '@emotion/styled': registry.npmjs.org/@emotion/styled/11.10.6_oouaibmszuch5k64ms7uxp2aia
   '@reduxjs/toolkit': registry.npmjs.org/@reduxjs/toolkit/1.9.2_k4ae6lp43ej6mezo3ztvx6pykq
   axios: registry.npmjs.org/axios/1.3.3
+  dotenv: registry.npmjs.org/dotenv/16.0.3
   framer-motion: registry.npmjs.org/framer-motion/9.0.4_biqbaboplfbrettd7655fr4n2y
   react: registry.npmjs.org/react/18.2.0
   react-dom: registry.npmjs.org/react-dom/18.2.0_react@18.2.0
@@ -2816,6 +2818,13 @@ packages:
       domelementtype: registry.npmjs.org/domelementtype/2.3.0
       domhandler: registry.npmjs.org/domhandler/4.3.1
     dev: true
+
+  registry.npmjs.org/dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz}
+    name: dotenv
+    version: 16.0.3
+    engines: {node: '>=12'}
+    dev: false
 
   registry.npmjs.org/electron-to-chromium/1.4.284:
     resolution: {integrity: sha512-M8WEXFuKXMYMVr45fo8mq0wUrrJHheiKZf6BArTKk9ZBYCKJEOU5H8cdWgDT+qCVZf7Na4lVUaZsA+h6uA9+PA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.284.tgz}
