@@ -18,6 +18,7 @@
     color: white;
     display: grid;
     height: 70px;
+    width: 100%;
     align-self: center;
     backdrop-filter: blur(2px);
     grid-template-areas: "navbar_header navbar_link navbar_button";

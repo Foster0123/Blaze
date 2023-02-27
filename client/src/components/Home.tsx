@@ -1,6 +1,7 @@
 import NavBar from "./shared/NavBar";
 import background from './../assets/img/background-1.svg'
 import { useEffect, useState } from "react";
+import Footer from "./shared/Footer";
 
 const HomePage = () => {
     const [ data, setData ] = useState(null)
@@ -13,7 +14,7 @@ const HomePage = () => {
     return(
         <div className="index-page" style={{ backgroundImage: `url(${background})` }}>
             <NavBar />
-            <h3>{data}</h3>
+            <Footer />
         </div>
     )
 }

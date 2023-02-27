@@ -1,6 +1,11 @@
+.signin-form-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .signin-form-container {
     display: flex;
-    height: 100%;
     padding: 10px;
     align-items: center;
     justify-content: center;

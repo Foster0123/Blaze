@@ -1,13 +1,14 @@
 import { Stack, Input, InputGroup, InputLeftAddon, Text, Button, FormLabel, Checkbox, InputRightAddon } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "./shared/Footer";
 import NavBar from "./shared/NavBar";
 
 const Signin = () => {
     const [showPassword, setShowPassword] = useState(false)
     const toggleVisibility1 = () => setShowPassword(!showPassword)
     return (
-        <div>
+        <div className="signin-form-section">
             <NavBar />
             <div className="signin-form-container">
                 <form action="" className="signin-form">
@@ -39,6 +40,7 @@ const Signin = () => {
                     </Stack>
                 </form>
             </div>
+            <Footer />
         </div>
     );
 };

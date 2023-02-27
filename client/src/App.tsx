@@ -18,20 +18,19 @@ import CheckEmail from "./components/helpers/CheckEmail";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Axios from 'axios'
-import Footer from "./components/shared/Footer";
 function App() {
-	const [ auth, setAuth ] = useState(false);
+	const [ auth, setAuth ] = useState(true);
 	let value = useSelector((state: any) => state.authSlice.authenticated)
-	useEffect(() => {
-		try {
-			Axios.get("http://localhost:3000")
-			.then(res => {console.log(res.data.auth);setAuth(res.data.auth)})
-			.catch((err) => console.error(err))
-		}
-		catch (err) {
-			console.error(err)
-		}
-	}, [])
+	// useEffect(() => {
+	// 	try {
+	// 		Axios.get("http://localhost:3000")
+	// 		.then(res => {console.log(res.data.auth);setAuth(res.data.auth)})
+	// 		.catch((err) => console.error(err))
+	// 	}
+	// 	catch (err) {
+	// 		console.error(err)
+	// 	}
+	// }, [])
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -56,7 +55,6 @@ function App() {
 				<Route path="/forgot-password" element={<ForgotPassword />} />
 				<Route path="/forgot-password/check-email" element={<CheckEmail />} />
 			</Routes>
-			<Footer />
 		</BrowserRouter>
 	);
 }
