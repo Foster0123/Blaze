@@ -12,9 +12,6 @@ const Footer = () => {
                 <a href="#">
                     <i className="fa-brands fa-facebook"></i>
                 </a>
-                <a href="#">
-                    <i className="fa-brands fa-discord"></i>
-                </a>
             </section>
             <p className="footer-text">&copy;Copyright 2023, Foster Z</p>
         </footer>

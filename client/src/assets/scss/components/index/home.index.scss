@@ -1,6 +1,7 @@
 :root {
-    // --index-page-bg-color: rgba(0,0,0,0.9);
-    --index-page-bg-color: rgba(255, 255,255,0.9);
+    --index-page-bg-color: rgba(0,0,0,0.9);
+    --index-page-fg-color:whitesmoke;
+    // --index-page-bg-color: rgba(255, 255,255,0.9);
 }
 .index-page {
     height: 100%;
@@ -9,4 +10,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    display: flex;
+    color: var(--index-page-fg-color);
+    justify-content: space-between;
+    flex-direction: column;
 }

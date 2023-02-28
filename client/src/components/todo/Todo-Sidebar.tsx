@@ -1,17 +1,16 @@
 import { Box, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Text, Stack } from "@chakra-ui/react"
 import { useSelector } from "react-redux"
 
-const styles1 = {
-    transform:"scaleX(0)",
-    transformOrigin: "left"
-}
-const styles2 = {
-    transform: "scaleX(1)"
-}
-const TodoSideBar = () => {
-    const sidebarActive = useSelector((state: any) => state.uiSlice.value)
+const TodoSideBar = (props: any) => {
+    const sidebarVisible = useSelector((state: any) => state.uiSlice.sidebarVisible)
+    console.log(sidebarVisible)
+    const hideSideBar = {
+        transform: "scaleX(0)",
+        transition:"transform 200ms ease-in-out",
+        transformOrigin: "left"
+    }
     return (
-        <div className="todo-sidebar-container" style={!sidebarActive ? styles1 : styles2}>
+        <div className="todo-sidebar-container" style={!sidebarVisible ? hideSideBar : {}}>
             <Accordion defaultIndex={[0]} allowMultiple>
                 <AccordionItem>
                     <h2>

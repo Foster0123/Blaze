@@ -1,6 +1,7 @@
 :root {
     --todo-sidebar-bg-color:rgba(0,0,0,0.95);
     --todo-sidebar-item-bg-color:rgba(255, 196, 0, 0.925);
+    --scrollbar-thumb-bg-color:gold;
 }
 .todo-sidebar-container {
     grid-area: todo-sidebar;
@@ -10,13 +11,16 @@
     border-radius: 10px;
     overflow-y: scroll;
     z-index: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 300ms ease-in;
     &::-webkit-scrollbar {
         width: 5px;
         border-radius: 10px;
         background-color: silver;
     }
     &::-webkit-scrollbar-thumb {
-        background-color: gold;
+        background-color: var(--scrollbar-thumb-bg-color);
     }
 }
 .sidebar-items {
@@ -33,5 +37,6 @@
         left: 5px;
         width: 250px;
         top: 60px;
+        transform: scaleX(1);
     }
 }

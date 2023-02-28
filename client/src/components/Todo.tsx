@@ -5,14 +5,19 @@ import TodoSideBar from "./todo/Todo-Sidebar";
 import TodoBar from "./todo/TodoBar";
 
 const Todo = () => {
-    const val = useSelector((state: any) => state.uiSlice.value)
+    const sidebarVisible = useSelector((state: any) => state.uiSlice.sidebarVisible)
+    console.log(sidebarVisible)
     return (
         <div>
             <NavBar />
             <div className="todo-container">
                 <div className="todo">
                     <TodoBar />
-                    <TodoSideBar />
+                    {(() => {
+                        if(sidebarVisible){
+                            return <TodoSideBar />
+                        }
+                    })()}
                     <TodoPreview />
                 </div>
             </div>

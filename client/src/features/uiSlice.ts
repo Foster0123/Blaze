@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState : any = {
-	value: true
+	sidebarVisible: true
 }
 
 const uiSlice = createSlice({
@@ -9,9 +9,16 @@ const uiSlice = createSlice({
 	initialState,
 	reducers: {
 		showSideBar: (state, action) => {
-			state.value = !state.value;
+			if(window.innerWidth < 768) {
+				state.sidebarVisible = !state.sidebarVisible;
+			}
+		},
+		fixedSideBar: (state, action) => {
+			if(window.innerWidth > 768) {
+				state.sidebarVisible = true;
+			}
 		}
 	}
 })
-export const { showSideBar } = uiSlice.actions;
+export const { showSideBar, fixedSideBar } = uiSlice.actions;
 export default uiSlice.reducer;

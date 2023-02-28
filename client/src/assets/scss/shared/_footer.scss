@@ -1,10 +1,19 @@
+:root {
+    --footer-bg-color: linear-gradient(45deg, orange, rgba(252, 112, 0, 0.9));
+    --footer-fg-color: white;
+    --social-account-bg-color: rgba(0, 0, 0, 0.1);
+    --facebook-color: #4267B2;
+    --twitter-color: #1DA1F2;
+    --instagram-color: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
 footer {
-    background: linear-gradient(45deg, orangered, orange);
+    background: var(--footer-bg-color);
     padding: 10px;
 
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
-    color: white;
+    color: var(--footer-fg-color);
     text-align: center;
 
     .footer-text {
@@ -12,39 +21,35 @@ footer {
     }
 
     .social-accounts {
+        background-color: var(--social-account-bg-color);
+        border-radius: 10px;
+        padding: 5px 0;
+
         a {
             padding: 10px;
             border-radius: 50%;
 
             .fa-facebook {
-                background: linear-gradient(#eee, #333);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+                color: var(--facebook-color);
             }
 
             .fa-twitter {
-                color: #1DA1F2;
+                color: var(--twitter-color);
             }
 
             .fa-instagram {
-                background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+                background: var(--instagram-color);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
 
-            .fa-discord {
-                background: linear-gradient(#eee, #333);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
             i {
-                font-size: 32px;
-
+                font-size: 24px;
+                cursor: pointer;
+                border-radius: 50%;
+                padding: 1.5px;
             }
 
         }

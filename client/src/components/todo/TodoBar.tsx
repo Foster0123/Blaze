@@ -1,14 +1,13 @@
 import { Button, IconButton, Stack, Text } from "@chakra-ui/react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { showSideBar } from "../../features/uiSlice";
 const TodoBar = () => {
     const dispatch = useDispatch()
-    const sidebarActive = useSelector((state: any) => state.uiSlice.value)
     return (
         <div className="todobar-container">
             <div className="todobar">
                 <Stack direction="row" padding={0}>
-                    <IconButton aria-label="" size="sm" colorScheme="white" variant="outline" onClick={() => dispatch(showSideBar)}>
+                    <IconButton aria-label="" size="sm" colorScheme="white" variant="outline" onClick={() => dispatch(showSideBar())}>
                         <i className="bi bi-layout-sidebar"></i>
                     </IconButton>
                     <Text fontSize="xl">User's Todo Dashboard</Text>
