@@ -1,7 +1,8 @@
 import { Box, Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel, Text, Stack } from "@chakra-ui/react"
-import { useSelector } from "react-redux"
-
+import { useDispatch, useSelector } from "react-redux"
+import { toggleSideBar } from "../../features/uiSlice"
 const TodoSideBar = (props: any) => {
+    const dispatch = useDispatch()
     const sidebarVisible = useSelector((state: any) => state.uiSlice.sidebarVisible)
     console.log(sidebarVisible)
     const hideSideBar = {
@@ -9,6 +10,16 @@ const TodoSideBar = (props: any) => {
         transition:"transform 200ms ease-in-out",
         transformOrigin: "left"
     }
+    window.addEventListener("resize", () => {
+        if(window.innerWidth >= 768) {
+            dispatch(toggleSideBar(true))
+        }
+    })
+    window.addEventListener("load", () => {
+        if(window.innerWidth >= 768) {
+            dispatch(toggleSideBar(true))
+        }
+    })
     return (
         <div className="todo-sidebar-container" style={!sidebarVisible ? hideSideBar : {}}>
             <Accordion defaultIndex={[0]} allowMultiple>

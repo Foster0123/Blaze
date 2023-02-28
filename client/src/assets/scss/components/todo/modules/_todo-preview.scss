@@ -1,5 +1,11 @@
 :root {
     --todo-preview-bg-color:rgba(37, 37, 37, 0.911);
+    --todo-task-bg-color:rgba(0,0,0,0.85);
+    --todo-task-edit-bg-color:goldenrod;
+    --todo-task-delete-bg-color:darkred;
+    --scrollbar-thumb-color:gold;
+    --scrollbar-bg-color:silver;
+    --todo-index-border-color:gold;
 }
 .todo-preview-container {
     grid-area: todo-preview;
@@ -26,14 +32,14 @@
     &::-webkit-scrollbar {
         width: 5px;
         border-radius: 10px;
-        background-color: silver;
+        background-color: var(--scrollbar-bg-color);
     }
     &::-webkit-scrollbar-thumb {
-        background-color: gold;
+        background-color: var(--scrollbar-thumb-color);
     }
 }
 .todo-tasks {
-    background-color: rgba(0,0,0,0.85);
+    background-color: var(--todo-task-bg-color);
     border-radius: 10px;
     padding: 5px;
     display: grid;
@@ -50,7 +56,7 @@
     border-radius: 50%;
     position: relative;
     padding: .5px;
-    border-right: 2px solid gold;
+    border-right: 2px solid var();
     .todo-index {
         display: flex;
         justify-content: center;
@@ -78,10 +84,10 @@
         position: relative;
     }
     .edit-button {
-        background-color: goldenrod;
+        background-color: var(--todo-task-edit-bg-color);
     }
     .delete-button {
-        background-color: darkred;
+        background-color: var(--todo-task-delete-bg-color);
     }
 }
 

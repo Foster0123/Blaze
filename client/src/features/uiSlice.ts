@@ -13,7 +13,10 @@ const uiSlice = createSlice({
 				state.sidebarVisible = !state.sidebarVisible;
 			}
 		},
+		toggleSideBar: (state, action) => {
+			state.sidebarVisible = action.payload;
+		}
 	}
 })
-export const { showSideBar } = uiSlice.actions;
+export const { showSideBar, toggleSideBar } = uiSlice.actions;
 export default uiSlice.reducer;
