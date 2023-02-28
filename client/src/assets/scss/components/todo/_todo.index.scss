@@ -2,7 +2,7 @@
 @use './modules/sidebar-todo';
 @use './modules/todo-preview';
 :root {
-    --todo-section-height: 75vh;
+    --todo-section-height: 80vh;
 }
 .todo-container {
     width: 100%;
@@ -38,5 +38,10 @@
             "todo-preview todo-preview todo-preview"
             "todo-preview todo-preview todo-preview"
         ;
+    }
+}
+@media (max-width: 400px) {
+    .todo {
+        grid-template-rows: 100px auto;
     }
 }

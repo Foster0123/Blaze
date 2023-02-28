@@ -37,11 +37,14 @@
     border-radius: 10px;
     padding: 5px;
     display: grid;
+    grid-template-areas: 
+    "todo-checkbox todo-index todo-content todo-buttons";
     grid-template-columns: 25px 40px 1fr 80px;
     justify-content: space-between;
     align-items: center;
 }
 .todo-tasks .todo-task-index {
+    grid-area: todo-index;
     display: inline-block;
     margin-right: 5px;
     border-radius: 50%;
@@ -55,11 +58,15 @@
     }
 }
 .todo-tasks .todo-task-info {
+    grid-area: todo-content;
     h4 {
-        font-weight: bold;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-family: "Open Sans", sans-serif;
     }
 }
 .todo-tasks .todo-task-buttons {
+    grid-area: todo-buttons;
     display: flex;
     justify-content: center;
     font-size: 18px;
@@ -71,9 +78,22 @@
         position: relative;
     }
     .edit-button {
-        background-color: gold;
+        background-color: goldenrod;
     }
     .delete-button {
-        background-color: red;
+        background-color: darkred;
+    }
+}
+
+@media (max-width: 400px) {
+    .todo-tasks {
+       grid-template-areas: 
+        "todo-checkbox todo-index todo-buttons todo-buttons"
+        "todo-content todo-content todo-content todo-content"
+        ;
+    }
+    .todo-tasks .todo-task-buttons {
+        margin-top: 2px;
+        justify-content: flex-end;
     }
 }

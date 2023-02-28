@@ -1,5 +1,6 @@
 import NavBar from "./shared/NavBar";
-import background from './../assets/img/background-1.svg'
+import background from './../assets/img/background-2.svg'
+import logo from './../assets/img/blaze.png';
 import { useEffect, useState } from "react";
 import Footer from "./shared/Footer";
 
@@ -14,6 +15,9 @@ const HomePage = () => {
     return(
         <div className="index-page" style={{ backgroundImage: `url(${background})` }}>
             <NavBar />
+            <section className="index-image-section">
+                <img className="index-logo" src={logo}  alt="App Logo"/>
+            </section>
             <Footer />
         </div>
     )

@@ -8,6 +8,7 @@
     color: white;
     padding: 10px;
     width: 100%;
+    height: 100%;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -16,4 +17,15 @@
 }
 .todobar-header {
     text-align: center;
+}
+
+@media (max-width: 400px) {
+    .todobar {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        div {
+            margin-bottom: 10px;
+        }
+    }
 }

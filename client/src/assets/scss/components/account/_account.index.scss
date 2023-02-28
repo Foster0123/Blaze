@@ -2,7 +2,16 @@
 @use './modules/account-update';
 @use './modules/account-additionals';
 @use './modules/account-operation';
+:root {
+    --account-bg-color: floralwhite;
+    --account-fg-color: rgba(0,0,0,0.85);
+    --account-window-bg-color: white ;
+    --account-window-fg-color:rgba(0,0,0,0.3);
+    --accent-color:orange;
+}
 .account-page {
+    color: var(--account-fg-color);
+    background: var(--account-bg-color);
     padding: 10px;
     display: grid;
     justify-content: center;
@@ -14,13 +23,12 @@
         "aa ao"
     ;
     grid-template-columns: repeat(2, 1fr);
-    // grid-auto-rows: minmax(150px, auto);
 }
 .account-window {
     border-radius: 10px;
     padding: 10px;
-    background-color: rgba(255,255,255,0.8);
-    box-shadow: 0 0 10px silver;
+    background-color: var(--account-window-bg-color);
+    box-shadow: 0 0 10px var(--accent-color);
 }
 .account-window-headers {
     width: 100%;

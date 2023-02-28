@@ -28,6 +28,7 @@
     transition: height, 200ms ease;
     overflow: hidden;
     background: var(--navbar-bg-color);
+    z-index: 1;
 }
 
 .navbar-header {

@@ -40,3 +40,10 @@
         transform: scaleX(1);
     }
 }
+
+@media (max-width: 400px) {
+    .todo-sidebar-container {
+        top: 110px;
+        width: 200px;
+    }
+}

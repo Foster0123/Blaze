@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Stack, InputGroup, InputLeftAddon, InputRightAddon, Input, Checkbox, Button, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import NavBar from "./shared/NavBar";
+import Footer from "./shared/Footer";
 import Hr from "./modules/Hr";
 import GoogleIcon from './../assets/img/google.png'
 
@@ -81,6 +82,7 @@ const Signup = () => {
                     </Stack>
                 </form>
             </div>
+            <Footer />
         </div>
     )
 }
