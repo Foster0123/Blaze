@@ -1,5 +1,6 @@
 :root {
-    --todo-preview-bg-color:rgba(37, 37, 37, 0.911);
+    --todo-preview-bg-color:rgba(255, 255, 255, 0.5);
+    --todo-component-bg-color: rgba(255, 255, 255, 0.5);
     --todo-task-bg-color:rgba(0,0,0,0.85);
     --todo-task-edit-bg-color:goldenrod;
     --todo-task-delete-bg-color:darkred;
@@ -9,7 +10,7 @@
 }
 .todo-preview-container {
     grid-area: todo-preview;
-    background-color: var(--todo-preview-bg-color)!important;
+    background-color: var(--todo-component-bg-color)!important;
     padding: 10px;
     height: var(--todo-section-height);
     display: grid;
@@ -56,7 +57,7 @@
     border-radius: 50%;
     position: relative;
     padding: .5px;
-    border-right: 2px solid var();
+    border-right: 2px solid var(--todo-index-border-color);
     .todo-index {
         display: flex;
         justify-content: center;

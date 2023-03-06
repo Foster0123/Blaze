@@ -1,5 +1,6 @@
 :root {
-    --footer-bg-color: linear-gradient(45deg, orange, rgba(252, 112, 0, 0.9));
+    // --footer-bg-color: linear-gradient(45deg, orange, rgba(252, 112, 0, 0.9));
+    --footer-bg-color:transparent;
     --footer-fg-color: white;
     --social-account-bg-color: rgba(0, 0, 0, 0.3);
     --facebook-color: #4267B2;
@@ -10,7 +11,7 @@
 footer {
     background: var(--footer-bg-color);
     padding: 10px;
-
+    margin-top: 100px;
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
     color: var(--footer-fg-color);

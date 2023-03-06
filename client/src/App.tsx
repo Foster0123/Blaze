@@ -18,6 +18,7 @@ import CheckEmail from "./components/helpers/CheckEmail";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Axios from 'axios'
+
 function App() {
 	const [ auth, setAuth ] = useState(true);
 	let value = useSelector((state: any) => state.authSlice.authenticated)

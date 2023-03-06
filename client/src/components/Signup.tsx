@@ -5,6 +5,7 @@ import NavBar from "./shared/NavBar";
 import Footer from "./shared/Footer";
 import Hr from "./modules/Hr";
 import GoogleIcon from './../assets/img/google.png'
+import background from './../assets/img/background-2.svg'
 
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -13,7 +14,7 @@ const Signup = () => {
     const toggleVisibility1 = () => setShowPassword(!showPassword)
     const toggleVisibility2 = () => setShowRetypePassword(!showRetypePassword)
     return (
-        <div>
+        <div className="signup-form-section" style={{ backgroundImage: `url('${background}')` }}>
             <NavBar />
             <div className="signin-form-container">
                 <form action="" className="signin-form">

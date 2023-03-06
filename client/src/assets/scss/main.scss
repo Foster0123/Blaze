@@ -5,11 +5,13 @@
 @use './components/forgot-password/forgot-password.index';
 @use './components/forgot-password/check-email.index';
 @use './components/signin/signin.index';
+@use './components/signup/signup.index.scss';
 @use './components/todo/todo.index';
 @use './components/account/account.index';
 @use './components/index/home.index.scss';
 :root {
-    --default-text-color:white;
+    --default-fg-color:black;
+    --default-bg-color:white;
 }
 html, body {
     height: 100%;

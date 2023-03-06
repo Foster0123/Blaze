@@ -8,13 +8,13 @@ const uiSlice = createSlice({
 	name: 'uiSlice',
 	initialState,
 	reducers: {
-		showSideBar: (state, action) => {
+		showSideBar: (state) => {
 			if(window.innerWidth < 768) {
 				state.sidebarVisible = !state.sidebarVisible;
 			}
 		},
 		toggleSideBar: (state, action) => {
-			state.sidebarVisible = action.payload;
+			state.sidebarVisible = !state.sidebarVisible;
 		}
 	}
 })

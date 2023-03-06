@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import Footer from "./shared/Footer";
 import NavBar from "./shared/NavBar";
 
-const Signin = () => {
+import background from './../assets/img/background-2.svg'
+
+const Signin = (props: any) => {
     const [showPassword, setShowPassword] = useState(false)
     const toggleVisibility1 = () => setShowPassword(!showPassword)
     return (
-        <div className="signin-form-section">
+        <div className="signin-form-section" style={{backgroundImage:`url(${background})`}}>
             <NavBar />
             <div className="signin-form-container">
                 <form action="" className="signin-form">

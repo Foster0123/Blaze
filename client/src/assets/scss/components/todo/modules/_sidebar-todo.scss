@@ -4,9 +4,10 @@
     --scrollbar-thumb-bg-color:gold;
 }
 .todo-sidebar-container {
+    color: var(--default-fg-color);
     grid-area: todo-sidebar;
     height: var(--todo-section-height);
-    background-color: var(--todo-sidebar-bg-color);
+    background-color: var(--todo-component-bg-color);
     padding: 10px;
     border-radius: 10px;
     overflow-y: scroll;
