@@ -10,8 +10,8 @@
     --accent-color:orange;
 }
 .account-page {
-    color: var(--account-fg-color);
-    background: var(--account-bg-color);
+    color: var(--default-fg-color);
+    background: var(--default-bg-color);
     padding: 10px;
     display: grid;
     justify-content: center;
@@ -27,7 +27,6 @@
 .account-window {
     border-radius: 10px;
     padding: 10px;
-    background-color: var(--account-window-bg-color);
     box-shadow: 0 0 10px var(--accent-color);
 }
 .account-window-headers {

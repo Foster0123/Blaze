@@ -19,7 +19,7 @@
     display: none;
 }
 .switch-input:checked + .custom-switch::before {
-    left: 85%;
+    left: 95%;
     content: var(--theme-switch-slide-icon-dark);
     color: var(--theme-switch-slide-icon-color-dark);
     transition: left,content, 

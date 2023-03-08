@@ -4,11 +4,8 @@ import { toggleSideBar } from "../../features/uiSlice"
 const TodoSideBar = (props: any) => {
     const dispatch = useDispatch()
     const sidebarVisible = useSelector((state: any) => state.uiSlice.sidebarVisible)
-    console.log(sidebarVisible)
     const hideSideBar = {
-        transform: "scaleX(0)",
-        transition:"transform 200ms ease-in-out",
-        transformOrigin: "left"
+        width: "10px"
     }
     window.addEventListener("resize", () => {
         if(window.innerWidth >= 768) {

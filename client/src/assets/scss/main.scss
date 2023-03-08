@@ -10,8 +10,8 @@
 @use './components/account/account.index';
 @use './components/index/home.index.scss';
 :root {
-    --default-fg-color:black;
-    --default-bg-color:white;
+    --default-fg-color:var(--chakra-colors-chakra-body-text);
+    --default-bg-color:var(--chakra-colors-chakra-body-tag);
 }
 html, body {
     height: 100%;

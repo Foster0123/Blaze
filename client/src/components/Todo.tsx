@@ -1,11 +1,10 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import NavBar from "./shared/NavBar";
 import TodoPreview from "./todo/Todo-Preview";
 import TodoSideBar from "./todo/Todo-Sidebar";
 import TodoBar from "./todo/TodoBar";
 const Todo = () => {
     const sidebarVisible = useSelector((state: any) => state.uiSlice.sidebarVisible)
-    console.log(sidebarVisible)
     return (
         <div>
             <NavBar />
