@@ -17,7 +17,7 @@ const TodoBar = () => {
                     onClick={() => sidebarVisible ? dispatch(toggleSideBar(false)) : dispatch(toggleSideBar(true))}>
                         <i className="bi bi-layout-sidebar"></i>
                     </IconButton>
-                    <Text fontSize="xl">User's Todo Dashboard</Text>
+                    <Text className="todobar-header" fontSize="xl">User's Todo Dashboard</Text>
                 </Stack>
                 <Stack direction="row" spacing={2} className="todobar-buttons">
                     <Button size="sm" colorScheme="green">Add</Button>

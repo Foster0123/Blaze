@@ -6,7 +6,7 @@ const CheckEmail = () => {
         <div>
             <section className="check-email" style={{ backgroundImage: `url(${background})` }}>
                 <div className="check-email-box">
-                    <Text fontSize="lg" fontWeight="bold">
+                    <Text fontSize="lg" fontWeight="bold" marginBottom={5}>
                         A Link Has Been Sent To Your Email, Please Check Out
                         <i className="fa-solid fa-circle-check" style={{color:"gold", marginLeft: "5px"}}></i>
                     </Text>
@@ -14,7 +14,7 @@ const CheckEmail = () => {
                         <Link to="/">
                             <IconButton 
                             style={{padding: "10px", marginRight: "2px"}}
-                            colorScheme="yellow" 
+                            colorScheme="blue" 
                             aria-label="home" 
                             icon={
                                 <i className="fa-solid fa-home" 

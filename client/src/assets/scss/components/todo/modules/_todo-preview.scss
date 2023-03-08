@@ -10,7 +10,8 @@
 }
 .todo-preview-container {
     grid-area: todo-preview;
-    background-color: var(--todo-component-bg-color)!important;
+    background-color: var(--default-bg-color);
+    color: var(--default-fg-color);
     padding: 10px;
     height: var(--todo-section-height);
     display: grid;

@@ -22,7 +22,7 @@ const Signin = (props: any) => {
                             </InputLeftAddon>
                             <Input type="text" name="signin_username_email" placeholder="Username or Email" />
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Username Invalid</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Username Invalid</Text>
                         <InputGroup>
                             <InputLeftAddon style={{paddingLeft:"5px", paddingRight:"5px"}}>
                                 <i style={{ fontSize: "24px" }} className="bi bi-key"></i>
@@ -32,7 +32,7 @@ const Signin = (props: any) => {
                                 <i className={showPassword ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"}></i>
                             </InputRightAddon>
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Password Invalid</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Password Invalid</Text>
                         <Checkbox name="remember">Remember Me</Checkbox>
                         <Text fontSize="md" textAlign="center">
                             Forgot Password?

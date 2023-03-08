@@ -31,7 +31,7 @@ const Signup = () => {
                                 <i style={{ fontSize: "16px" }} className="bi bi-info-circle"></i>
                             </InputRightAddon>
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Name Invalid</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Name Invalid</Text>
 
                         <InputGroup>
                             <InputLeftAddon style={{ paddingLeft: "5px", paddingRight: "5px" }}>
@@ -42,7 +42,7 @@ const Signup = () => {
                                 <i style={{ fontSize: "16px" }} className="bi bi-info-circle"></i>
                             </InputRightAddon>
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Username Invalid</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Username Invalid</Text>
 
                         <InputGroup>
                             <InputLeftAddon style={{ paddingLeft: "5px", paddingRight: "5px" }}>
@@ -53,7 +53,7 @@ const Signup = () => {
                                 <i style={{ fontSize: "16px" }} className="bi bi-info-circle"></i>
                             </InputRightAddon>
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Email Invalid</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Email Invalid</Text>
 
                         <InputGroup>
                             <InputLeftAddon style={{ paddingLeft: "5px", paddingRight: "5px" }}>
@@ -64,7 +64,7 @@ const Signup = () => {
                                 <i style={{ fontSize: "16px" }} className={showPassword ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"}></i>
                             </InputRightAddon>
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Password Invalid</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Password Invalid</Text>
 
                         <InputGroup>
                             <InputLeftAddon style={{ paddingLeft: "5px", paddingRight: "5px" }}>
@@ -75,7 +75,7 @@ const Signup = () => {
                                 <i style={{ fontSize: "16px" }} className={showRetypePassword ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"}></i>
                             </InputRightAddon>
                         </InputGroup>
-                        <Text textAlign="right" fontSize="md" color="red">Password Doesnt Match</Text>
+                        <Text textAlign="right" fontSize="md" color="var(--default-fg-error)">Password Doesnt Match</Text>
                         <Checkbox name="signup_remember">Remember Me</Checkbox>
                         <Button>Register</Button>
                         <Hr color="orange" height={2.5}/>

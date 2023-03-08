@@ -1,8 +1,26 @@
+:root {
+    --default-fg-color: var(--chakra-colors-chakra-body-text);
+    --default-bg-color: var(--chakra-colors-chakra-body-tag);
+    --default-fg-error: orangered;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+
+}
+
+body {
+    font-size: 14px;
+}
+
+#root {
+    height: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
-    font-size: 14px;
 }
