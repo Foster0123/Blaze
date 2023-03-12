@@ -13,8 +13,8 @@ import Account from "./components/Account";
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import Todo from "./components/Todo";
-import ForgotPassword from "./components/helpers/ForgotPassword";
-import CheckEmail from "./components/helpers/CheckEmail";
+import ForgotPassword from "./components/helpers/Forgot-Password";
+import CheckEmail from "./components/helpers/Check-Email";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Axios from 'axios'

@@ -17,7 +17,7 @@ const Signup = () => {
         <div className="signup-form-section" style={{ backgroundImage: `url('${background}')` }}>
             <NavBar />
             <div className="signin-form-container">
-                <form action="" className="signin-form">
+                <form action="" className="signin-form" method="POST">
                     <Stack>
 
                         <Text fontSize="4xl" textAlign="center">Register</Text>

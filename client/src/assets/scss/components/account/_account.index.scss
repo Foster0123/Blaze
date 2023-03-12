@@ -19,7 +19,7 @@
     grid-template-areas: 
         "ai au"
         "ai au"
-        "aa au"
+        "aa ap"
         "aa ao"
     ;
     grid-template-columns: repeat(2, 1fr);
@@ -53,6 +53,7 @@
         grid-template-areas: 
             "ai ai"
             "au au"
+            "ap ap"
             "aa aa"
             "ao ao"
         ;
@@ -64,5 +65,12 @@
 .account-operation {
     grid-area: ao;
 }
-.account-update {grid-area: au;}
-.account-additionals {grid-area: aa;}
+.account-update {
+    grid-area: au;
+}
+.account-password {
+    grid-area: ap;
+}
+.account-additionals {
+    grid-area: aa;
+}
