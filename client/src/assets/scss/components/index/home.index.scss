@@ -36,8 +36,9 @@
             text-shadow: 0 0 2.5px var(--index-page-accent-color);
             color: var(--index-page-accent-color);
             text-decoration: wavy;
+            transition: letter-spacing,  300ms ease;
             &:hover {
-                letter-spacing: 10px;
+                letter-spacing: 5px;
                 transition: letter-spacing,  300ms ease;
             }
         }
