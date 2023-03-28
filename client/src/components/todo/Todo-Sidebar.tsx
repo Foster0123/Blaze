@@ -17,9 +17,6 @@ const TodoSideBar = (props: any) => {
             dispatch(toggleSideBar(true))
         }
     })
-    let data = [
-        {id: 1, header: '', content: ''}
-    ]
     return (
         <div className="todo-sidebar-container" style={!sidebarVisible ? hideSideBar : {}}>
             <Accordion defaultIndex={[0]} allowMultiple>
