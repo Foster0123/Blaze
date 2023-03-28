@@ -1,6 +1,6 @@
 import NavBar from "./shared/NavBar";
-import background from './../assets/img/background-2.svg'
-import logo from './../assets/img/blaze.png';
+import background from './../assets/img/bg/background-2.svg'
+import logo from './../assets/img/blaze.svg';
 import { useEffect, useState } from "react";
 import Footer from "./shared/Footer";
 

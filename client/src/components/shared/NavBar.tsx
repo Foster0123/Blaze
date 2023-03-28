@@ -2,8 +2,8 @@ import { useRef } from 'react'
 import { Button, Stack } from '@chakra-ui/react'
 import ThemeSwitch from '../modules/ThemeSwitch'
 import { NavLink } from 'react-router-dom'
-import Logo from './../../assets/img/blaze.png'
-import ProfilePicture from './../../assets/img/user.png'
+import Logo from './../../assets/img/logos/blaze.png'
+import ProfilePicture from './../../assets/img/pictures/user.png'
 const NavBar = () => {
     const Navbar: any = useRef(null);
     const navMenuIcon: any = useRef(null)

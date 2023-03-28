@@ -18,6 +18,7 @@ import CheckEmail from "./components/helpers/Check-Email";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Axios from 'axios'
+import ValidateAccount from "./components/helpers/Validate-Account";
 
 function App() {
 	const [ auth, setAuth ] = useState(true);
@@ -52,9 +53,10 @@ function App() {
 				
 				<Route path="/signin" element={<Signin />} />
 				<Route path="/signup" element={<Signup />} />
-				<Route path="*" element={<NotFound />} />
+				<Route path="/signup/validate-account" element={<ValidateAccount />} />
 				<Route path="/forgot-password" element={<ForgotPassword />} />
 				<Route path="/forgot-password/check-email" element={<CheckEmail />} />
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</BrowserRouter>
 	);

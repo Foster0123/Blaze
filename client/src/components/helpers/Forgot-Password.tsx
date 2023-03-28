@@ -1,5 +1,5 @@
 import { Input, Text, Button, Stack, InputGroup, InputLeftAddon } from "@chakra-ui/react";
-import background from './../../assets/img/background.svg'
+import background from './../../assets/img/bg/background.svg'
 
 const ForgotPassword = () => {
     return (

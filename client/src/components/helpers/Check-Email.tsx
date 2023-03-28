@@ -1,6 +1,6 @@
 import { Text, Button, IconButton, Center } from "@chakra-ui/react"
 import { Link } from "react-router-dom";
-import background from './../../assets/img/background.svg';
+import background from './../../assets/img/bg/background.svg';
 const CheckEmail = () => {
     return (
         <div>

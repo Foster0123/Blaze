@@ -3,9 +3,11 @@
 @use './shared/navbar';
 @use './shared/footer';
 
-@use './components/signin/signin.index';
-@use './components/signup/signup.index.scss';
-@use './components/todo/todo.index';
-@use './components/account/account.index';
-@use './components/index/home.index.scss';
-@use './components/forgot-password/password-reset.scss';
+
+@use './components/home/home';
+@use './components/todo/todo';
+@use './components/signin/signin';
+@use './components/signup/signup';
+@use './components/account/account';
+@use './components/forgot-password/password-reset';
+@use './components/validate-account/validate-account';
