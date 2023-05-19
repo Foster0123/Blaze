@@ -6,7 +6,7 @@ const ForgotPassword = () => {
         <div>
             <div className="forgot-password-container" style={{backgroundImage: `url(${background})`}}>
                 <section className="forgot-password">
-                    <form className="forgot-password-form" action="" method="POST">
+                    <form className="forgot-password-form" action="/unknown" method="POST">
                         <h1>Forgot Password</h1>
                         <Text fontSize="lg" fontWeight="bold">Email</Text>
                         <InputGroup>

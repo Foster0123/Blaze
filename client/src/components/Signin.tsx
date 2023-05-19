@@ -5,20 +5,30 @@ import {
     InputLeftAddon,
     Text,
     Button,
-    FormLabel,
     Checkbox,
     InputRightAddon,
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, redirect, useNavigate } from 'react-router-dom'
+import { Axios } from 'axios'
 import Footer from './shared/Footer'
 import NavBar from './shared/NavBar'
 import GoogleIcon from './../assets/img/icons/social/google.png'
 import background from './../assets/img/bg/background-2.svg'
 
-const Signin = (props: any) => {
+const serverURL = "http://localhost:3000"
+
+const Signin = () => {
     const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate();
+    const axios = new Axios()
     const toggleVisibility1 = () => setShowPassword(!showPassword)
+    
+    const handleSubmit = async (form: any): Promise<any> => {
+        console.log(form)
+        await axios.post(form.target.action, new FormData(form.target))
+        navigate("/signin")
+    }
     return (
         <div
             className="signin-form-section"
@@ -26,7 +36,7 @@ const Signin = (props: any) => {
         >
             <NavBar />
             <div className="signin-form-container">
-                <form action="" className="signin-form" method="POST">
+                <form action={`${serverURL}/signin`} className="signin-form" method="POST" onSubmit={handleSubmit}>
                     <Stack>
                         <Text fontSize="4xl" textAlign="center">
                             Sign In
@@ -45,7 +55,7 @@ const Signin = (props: any) => {
                             </InputLeftAddon>
                             <Input
                                 type="text"
-                                name="signin_username_email"
+                                name="signin_user"
                                 placeholder="Username or Email"
                             />
                         </InputGroup>
@@ -111,10 +121,12 @@ const Signin = (props: any) => {
                                 Reset
                             </Link>
                         </Text>
-                        <Button>Sign In</Button>
+                        <Button type='submit'>Sign In</Button>
                         <Button
                             colorScheme="orange"
                             type="submit"
+                            isDisabled={true}
+                            title='Coming Soon'
                             leftIcon={
                                 <img
                                     src={GoogleIcon}

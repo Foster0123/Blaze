@@ -1,19 +1,30 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require('cors');
+import * as dotenv from 'dotenv'
 
-const { server } = require('./utils/server')
+import path from 'path';
+import express from 'express'
+import cors from 'cors'
+import { client } from './config/redis.js';
 
+import server from './utils/server.js';
+import todo from './data/data.json';
+
+dotenv.config()
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use(express.urlencoded({ extended:true }))
-
-app.get("/", (_, res) => {
-    res.send({ auth:true });
+app.use(express.urlencoded({ extended: true }))
+app.use((req, res, next) => {
+    console.log(`Url: ${req.url} Method: ${req.method}`)
+    next()
 })
-app.get("/account", (_, res) => {
-    res.sendStatus()
+app.get("/", async (_, res) => {
+    res.send({ data: "Data Exported To Client" });
 })
-
-app.listen(process.env.APP_PORT, server)
+app.post("/signin", (req: any, res: any) => {
+    const user = {
+        name: req.body.signin_user,
+        pass: req.body.signin_password
+    }
+    console.log(user);
+})
+app.listen(process.env.PORT, server())

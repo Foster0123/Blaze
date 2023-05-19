@@ -1,6 +1,8 @@
-require("dotenv").config()
+import * as dotenv from 'dotenv'
 
-const server = () => {
-    console.log(`Server Running On ${process.env.APP_HOST}:${process.env.APP_PORT}`);
+dotenv.config()
+const server: any = () => {
+    console.log(`Server Running On ${process.env.HOST}:${process.env.PORT}`);
+    return null;
 }
-module.exports = { server }
+export default server;
