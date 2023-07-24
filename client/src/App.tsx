@@ -1,8 +1,8 @@
 import 
 { 
-	BrowserRouter, 
+	BrowserRouter as Router, 
 	Routes, 
-	Route 
+	Route
 } 
 from "react-router-dom";
 
@@ -34,7 +34,7 @@ function App() {
 	// 	}
 	// }, [])
 	return (
-		<BrowserRouter>
+		<Router>
 			<Routes>
 				<Route path="/" index errorElement={<NotFound />} element={<HomePage />} />
 				<Route path="/todos" element={<Todo />} />
@@ -58,7 +58,7 @@ function App() {
 				<Route path="/forgot-password/check-email" element={<CheckEmail />} />
 				<Route path="*" element={<NotFound />} />
 			</Routes>
-		</BrowserRouter>
+		</Router>
 	);
 }
 export default App;
